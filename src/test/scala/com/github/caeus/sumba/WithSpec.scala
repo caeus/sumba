@@ -10,8 +10,8 @@ case class Perro(@BeanProperty hi:List[String],he:String,ho:Perro){
 }
 
 class HelloSpec extends FlatSpec with Matchers {
-  "The Hello object" should "say hello" in {
-    println(Perro(null,null,null).withHi(Nil))
+  "With annotation " should "work" in {
+    Perro(null,null,null).withHi(Nil).hi shouldEqual Nil
 
   }
 }

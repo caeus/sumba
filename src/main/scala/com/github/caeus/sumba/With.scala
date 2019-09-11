@@ -4,7 +4,7 @@ import scala.annotation.{StaticAnnotation, compileTimeOnly}
 import scala.language.experimental.macros
 import scala.reflect.macros.blackbox
 
-@compileTimeOnly("Unable to make class look like a wither")
+@compileTimeOnly("Enable macro paradise to expand compile-time macros")
 class With extends StaticAnnotation {
   def macroTransform(annottees: Any*): Any = macro WithMacros.impl
 }
